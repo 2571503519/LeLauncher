@@ -1,5 +1,6 @@
 package com.jacky.lelauncher;
 
+import android.animation.AnimatorSet;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +26,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     private Button btn1;
     private Button btn2;
     private ArcSeekBar arcSeekBar;
+    private ImageView mBackgroundView;
 
     public MainFragment() {
         // Required empty public constructor
@@ -53,11 +59,20 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         btn1 = containerView.findViewById(R.id.btn1);
         btn2 = containerView.findViewById(R.id.btn2);
         arcSeekBar = containerView.findViewById(R.id.arcSeekBar);
+        mBackgroundView = containerView.findViewById(R.id.background);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
 
         arcSeekBar.setShowTick(true);
+
+        AlphaAnimation animation = new AlphaAnimation(0.5f, 1.0f);
+        animation.setRepeatMode(Animation.REVERSE);
+        animation.setRepeatCount(Animation.INFINITE);
+        animation.setDuration(2000);
+
+        mBackgroundView.setAnimation(animation);
+
         return containerView;
     }
 

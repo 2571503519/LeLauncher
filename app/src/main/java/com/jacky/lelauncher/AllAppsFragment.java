@@ -53,26 +53,26 @@ public class AllAppsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         containerView = inflater.inflate(R.layout.fragment_allapps, container, false);
-        allAppsContainer = containerView.findViewById(R.id.all_apps);
-        List<String> allApps = new ArrayList<>();
-        allApps.add("QQ Music");
-        allApps.add("高德地图");
-        allApps.add("高德地图");
-        allApps.add("高德地图");
-        allApps.add("高德地图");
-        allApps.add("高德地图");
-        allApps.add("高德地图");
-        allApps.add("高德地图");
-        allApps.add("高德地图");
-        allApps.add("高德地图");
-        allApps.add("高德地图");
-        allApps.add("高德地图");
-        allApps.add("高德地图");
-
-        AllAppsAdapter adapter = new AllAppsAdapter(allApps);
-        allAppsContainer.setAdapter(adapter);
-        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 4);
-        allAppsContainer.setLayoutManager(layoutManager);
+//        allAppsContainer = containerView.findViewById(R.id.all_apps);
+//        List<String> allApps = new ArrayList<>();
+//        allApps.add("QQ Music");
+//        allApps.add("高德地图");
+//        allApps.add("高德地图");
+//        allApps.add("高德地图");
+//        allApps.add("高德地图");
+//        allApps.add("高德地图");
+//        allApps.add("高德地图");
+//        allApps.add("高德地图");
+//        allApps.add("高德地图");
+//        allApps.add("高德地图");
+//        allApps.add("高德地图");
+//        allApps.add("高德地图");
+//        allApps.add("高德地图");
+//
+//        AllAppsAdapter adapter = new AllAppsAdapter(allApps);
+//        allAppsContainer.setAdapter(adapter);
+//        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 4);
+//        allAppsContainer.setLayoutManager(layoutManager);
 
         return containerView;
     }
@@ -109,7 +109,7 @@ public class AllAppsFragment extends Fragment {
 
         public AppViewHolder(@NonNull View itemView) {
             super(itemView);
-            mTextView = itemView.findViewById(R.id.textView);
+//            mTextView = itemView.findViewById(R.id.textView);
         }
     }
 

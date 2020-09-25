@@ -520,6 +520,7 @@ public class ArcSeekBar extends View {
         if(mNormalColor != 0){
             mPaint.setColor(mNormalColor);
             //绘制底层弧形
+            mPaint.setAlpha(50);
             canvas.drawArc(rectF1,0,360,false,mPaint);
         }
 

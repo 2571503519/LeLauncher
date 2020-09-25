@@ -6,15 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-    <com.jacky.lelauncher.ArcSeekBar
-        android:id="@+id/arcSeekBar"
+    <ImageView
+        android:id="@+id/background"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/background_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jacky.lelauncher.ArcSeekBar
+        android:id="@+id/arcSeekBar"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         app:arcEnabledDrag="false"
         app:arcEnabledSingle="false"
         app:arcShowThumb="false"
+        app:arcShowTick="false"
+        app:arcStrokeWidth="30dp"
+        app:arcNormalColor="@color/color_light"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -25,6 +38,7 @@
         android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:text="递增"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +49,8 @@
         android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:text="递减"
+        android:visibility="gone"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -46,5 +62,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
